@@ -1,0 +1,21 @@
+pybullet build time: Nov  4 2026 12:48:21
+formation: circle
+preflight_feasible: true
+control_ticks: 905
+rc_commands_sent: 3620
+controlled_land_commands: 0
+mission_paused: false
+safety_events:
+- - 9.962499999999755
+  - 0
+  - stale
+- - 9.962499999999755
+  - 1
+  - stale
+- - 9.962499999999755
+  - 2
+  - stale
+- - 9.962499999999755
+  - 3
+  - stale
+

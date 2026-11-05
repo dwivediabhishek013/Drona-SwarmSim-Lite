@@ -1,0 +1,9 @@
+{
+  "sample_count": 3612,
+  "tracking_rms_3d_m": 0.4239181365363644,
+  "formation_shape_rms_m": 0.29273778499311714,
+  "phase_sync_rms_deg": null,
+  "minimum_true_separation_m": 0.421010588925492,
+  "localization_rms_capture_aligned_m": 0.08643517217535464,
+  "finite_localization_samples": 3612
+}

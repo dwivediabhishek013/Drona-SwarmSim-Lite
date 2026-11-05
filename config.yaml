@@ -1,0 +1,67 @@
+simulation:
+  engine: pybullet
+  physics_hz: 240
+  control_hz: 25
+  camera_hz: 30
+  headless: true
+world:
+  x_limits: [-1.0, 1.0]
+  y_limits: [-0.6, 0.6]
+  z_limits: [0.6, 1.4]
+  minimum_separation_m: 0.35
+camera:
+  position_m: [0.0, 0.0, 3.0]
+  look_at_m: [0.0, 0.0, 0.0]
+  width: 1280
+  height: 720
+  fx: 900.0
+  fy: 900.0
+  cx: 640.0
+  cy: 360.0
+  fps: 30
+  latency_s: 0.08
+  pixel_noise_sigma: 3.0
+  frame_drop_probability: 0.05
+  marker_dictionary: DICT_4X4_50
+  marker_size_m: 0.08
+  marker_id_equals_drone_id: true
+disturbances:
+  drift_acceleration_max_mps2: 0.15
+  battery_start: 1.00
+  battery_end: 0.93
+  battery_duration_s: 120
+  command_latency_s: 0.04
+swarm:
+  count: 4
+  line_spacing_m: 0.45
+  circle_radius_m: 0.45
+  height_m: 1.0
+  wave_amplitude_m: 0.20
+  wave_period_s: 6.0
+safety:
+  stale_after_s: 0.15
+  lost_after_s: 0.30
+  max_jump_m: 1.0
+controller:
+  hover_throttle: 1540
+  max_velocity_mps: 0.6
+  max_acceleration_mps2: 2.0
+  position_pid: {kp: 1.2, ki: 0.02, kd: 0.05, integral_limit: 30.0}
+  velocity_pid: {kp: 1.2, ki: 0.03, kd: 0.03, integral_limit: 66.6666667}
+  yaw_pid: {kp: 1.0, ki: 0.0, kd: 0.0, integral_limit: 1.0}
+rc:
+  min: 1000
+  neutral: 1500
+  max: 2000
+vehicle:
+  mass_kg: 0.033
+  half_extents_m: [0.04, 0.04, 0.015]
+  inertia_kg_m2: [0.00002, 0.00002, 0.00004]
+  max_thrust_n: 0.72
+  max_tilt_deg: 15.0
+  max_yaw_rate_deg_s: 90.0
+  linear_damping: 0.08
+  angular_damping: 0.10
+logging:
+  log_dir: logs
+  plot_dir: plots
